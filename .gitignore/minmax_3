@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int maxmin(int*arr, int first, int last)
+{
+	int max = arr[0];
+	
+	for(; first<last;++first)
+	{
+		if(arr[first]>max)
+	{	 
+		max=arr[first];
+	}
+	}
+	return max;
+
+}
+
+int main()
+{
+	int array[5]{2*(2+3),2*(8+3),2*(4+3),2*(2+5),2*(7+3)};
+	cout<<maxmin(array,0,5);
+	return 0;
+}
