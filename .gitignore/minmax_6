@@ -5,34 +5,38 @@ int posl_max(int*arr, int first, int last)
 {
 
 	int max = arr[0];
+	int index = first;
 	
 	for(; first<last;++first)
 	{
 		if(arr[first]<max)
 	{	 
 		max=arr[first];
+		index = first;
 	}
 	}
-	return max ;
+	return index ;
 
 }
 
 int per_min(int*arr, int first, int last)
 {
 	int min = arr[0];
+	int index = first;
 	for(; first<last;++first)
 	{
 		if(arr[first]<min)
 	{	 
 		min=arr[first];
+		index = first;
 	}
 	}
-	return min;
+	return index;
 }
 
 int main()
 {
-	int array[5]{24,2,1,84,3};
+	int array[5]{24,2,6,84,3};
 	cout<<posl_max(array,0,5)<<endl;
 	cout<<per_min(array,0,5);
 	return 0;
