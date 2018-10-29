@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int arr(int*arr, int first, int last)
+{
+	int temp=arr[0];
+	int temp1=arr[1];
+	int temp2;
+	for(;first<last;++first)
+	{
+		temp2=temp+temp1;
+		temp=temp2;
+		temp1=temp2;
+		cout<<temp2<<endl;
+	}
+}
+int main()
+{
+	int array[8]{1,2};
+	cout<<arr(array,2,8);
+	return 0;
+}
