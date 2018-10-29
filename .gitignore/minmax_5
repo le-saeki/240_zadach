@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+double maxmin(int*arr, int first, int last)
+{
+	double max = arr[0];
+	double index = first;
+	
+	for(; first<last;++first)
+	{
+		if(arr[first]>max)
+	{	 
+		max=arr[first];
+		index=first;
+	}
+	}
+	cout<<"VELICHINA:"<<max<<" NOMER:";
+	return index;
+
+}
+
+int main()
+{
+	int array[5]{81/8,49/7,36/6,55/5,40/4};
+	cout<<maxmin(array,0,5);
+	return 0;
+}
