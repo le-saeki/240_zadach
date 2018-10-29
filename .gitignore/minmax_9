@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int per_max(int*arr, int first, int last)
+{
+
+	int max = arr[0];
+	int index = first;
+	
+	for(; first<last;++first)
+	{
+		if(arr[first]>max)
+	{	 
+		max=arr[first];
+		index = first;
+	}
+	}
+	return index ;
+
+}
+
+int posl_max(int*arr, int first, int last)
+{
+	int max = arr[0];
+	int index = first;
+	
+	for(; first<last;++first)
+	{
+		if(arr[first]<max)
+	{	 
+		max=arr[first];
+		index = first;
+	}
+	}
+	return index;
+}
+
+int main()
+{
+	int array[5]{24,2,6,84,3};
+	cout<<per_max(array,0,5)<<endl;
+	cout<<posl_max(array,0,5);
+	return 0;
+}
