@@ -7,7 +7,7 @@ bool f(int a)
 int arr(int*arr, int first, int last,UP p)
 {
 	int temp=0;
-	int index=first;
+	
 	for(;first<last;++first)
 	{
 		
