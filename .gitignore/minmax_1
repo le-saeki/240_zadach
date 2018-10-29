@@ -4,8 +4,6 @@ using namespace std;
 int maxmin1(int*arr, int first, int last)
 {
 	int max = arr[0];
-	int min = arr[0];
-	
 	for(; first<last;++first)
 	{
 		if(arr[first]>max)
@@ -13,7 +11,13 @@ int maxmin1(int*arr, int first, int last)
 		max=arr[first];
 	}
 	}
-	cout<< max<<endl;
+	return max;
+}
+
+int maxmin2(int*arr, int first, int last)
+{
+
+	int min = arr[0];
 	
 	for(; first<last;++first)
 	{
@@ -22,15 +26,14 @@ int maxmin1(int*arr, int first, int last)
 		min=arr[first];
 	}
 	}
-
-	
 	return min ;
 
 }
 
 int main()
 {
-	int array[5]{2,3,56,4,3};
-	cout<<maxmin1(array,0,5);
+	int array[5]{24,2,56,84,3};
+	cout<<maxmin1(array,0,5)<<endl;
+	cout<<maxmin2(array,0,5);
 	return 0;
 }
