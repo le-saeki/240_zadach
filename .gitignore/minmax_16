@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int maxmin1(int*arr, int first, int last)
+{
+	int min = arr[0];
+	int temp=0;
+
+	
+	for(; first<last;++first)
+	{
+		if(arr[first]<min)
+	{	 
+	   min=arr[first];
+	   temp=first;
+	}
+	}
+ 	return temp;
+
+}
+
+int main()
+{
+	int array[5]{3,4,-5,6,8};
+	cout<<maxmin1(array,0,5);
+	return 0;
+}
