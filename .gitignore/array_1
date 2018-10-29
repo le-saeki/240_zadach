@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int arr(int*arr, int first, int last)
+{
+	for(;first<last;++first)
+	{
+		cout<<arr[first]<<endl;
+	}
+}
+int main()
+{
+	int array[8]{1,3,5,7,9,11,13,15};
+	cout<<arr(array,0,8);
+	return 0;
+}
