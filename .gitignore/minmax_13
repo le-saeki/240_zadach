@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int max(int*arr, int first, int last)
+{
+	int max = arr[0];
+	
+	for(; first<last;++first)
+	{
+		if(arr[first]>max && arr[first]%2==0)
+	{	 
+		max=arr[first];
+	}
+	
+	    if(max%2!=0)
+	    { return 0;
+	   	}
+	}
+ 	return max;
+
+}
+
+int main()
+{
+	int array[5]{5,-3,33,47,-5};
+	cout<<max(array,0,5);
+	return 0;
+}
