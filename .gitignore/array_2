@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int arr(int*arr, int first, int last)
+{
+	for(;first<last;++first)
+	{
+		cout<<pow(arr[first],first)<<endl;
+	}
+}
+int main()
+{
+	int array[8]{2,2,2,2,2,2,2,2};
+	cout<<arr(array,0,8);
+	return 0;
+}
