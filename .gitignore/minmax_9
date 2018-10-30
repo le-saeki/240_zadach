@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int arr(int*arr, int first, int last)
+{int max=arr[first];
+		int index=first;
+	for(;first<last;++first)  
+	{
+		if(arr[first]>max)
+		{
+        max=arr[first];
+        index=first;
+		}}
+		return index;
+}
+	
+	int arr2(int*arr, int first, int last)
+{
+	int max=arr[first];
+		int index=first;
+	for(;first<last;++first)  
+	{
+		if(arr[first]>=max)
+		{
+        max=arr[first];
+        index=first;
+		}}
+		return index;
+}
+	
+
+      
+int main()
+{
+	int array[8]{1,2,7,4,1,1,7,6};
+	cout<<arr(array,0,8)<<endl;
+	cout<<arr2(array,0,8);
+	return 0;
+}
